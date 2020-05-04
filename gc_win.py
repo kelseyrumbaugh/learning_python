@@ -10,21 +10,14 @@ w = 11
 
 for i in range(len(seq) - w + 1):
 	count = 0
+	sseq = seq[i:i+w]
 	for j in range(w):
 		if seq[i + j] == 'C' or seq[i + j] == 'G':
-			count += 1 
-	print('%d %s %.4f' % (i, seq[i:i+w], count/w))
- 
-"""
-for i in range(len(seq) - w + 1):
-	sseq = seq[i:i+w]
-	count = 0
-	for nt in sseq:
-		if nt == 'C' or nt == 'G':
 			count += 1
-	print('%d %s %.4f' % (i, sseq, count/w))		
-			
+	print('%d %s %.4f' % (i, sseq, count/w))
 
+
+"""
 0 ACGACGCAGGA 0.6364
 1 CGACGCAGGAG 0.7273
 2 GACGCAGGAGG 0.7273
